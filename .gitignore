@@ -1,32 +1,326 @@
-# Prerequisites
-*.d
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>N Jewelry South Sudan</title>
 
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
+  <style>
+    /* Black and Gold Theme */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-# Precompiled Headers
-*.gch
-*.pch
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #000000;
+      color: #d4af37;
+    }
 
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #000000;
+      padding: 15px 50px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      border-bottom: 1px solid #d4af37;
+    }
 
-# Fortran module files
-*.mod
-*.smod
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #d4af37;
+    }
 
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
+    nav ul {
+      list-style: none;
+      display: flex;
+    }
 
-# Executables
-*.exe
-*.out
-*.app
+    nav ul li {
+      position: relative;
+    }
+
+    nav ul li a {
+      padding: 10px 20px;
+      display: block;
+      text-decoration: none;
+      color: #d4af37;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: white;
+    }
+
+    nav ul li:hover .dropdown {
+      display: block;
+    }
+
+    .dropdown {
+      display: none;
+      position: absolute;
+      background-color: #000000;
+      border: 1px solid #d4af37;
+      top: 100%;
+      left: 0;
+    }
+
+    .dropdown li a {
+      color: #d4af37;
+      padding: 10px 20px;
+    }
+
+    main {
+      padding: 40px;
+    }
+
+    section {
+      margin-bottom: 60px;
+    }
+
+    h1, h2, h3, p {
+      margin-bottom: 20px;
+    }
+
+    .category {
+      margin-top: 30px;
+    }
+
+    .category img, .category video {
+      margin: 15px 0;
+      max-width: 100%;
+      border-radius: 10px;
+      border: 2px solid #d4af37;
+      transition: transform 1s ease;
+    }
+
+    .morph-section {
+      opacity: 0;
+      transform: scale(0.95);
+      transition: opacity 1s ease, transform 1s ease;
+    }
+
+    .morph-section.visible {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    .shop-now {
+      margin-top: 15px;
+      padding: 12px 30px;
+      font-size: 16px;
+      color: black;
+      background: linear-gradient(90deg, #d4af37, #f5d76e);
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: all 0.5s ease;
+      display: inline-block;
+      font-weight: bold;
+    }
+
+    .shop-now:hover {
+      transform: scale(1.1);
+      background: linear-gradient(90deg, #f5d76e, #d4af37);
+      box-shadow: 0 8px 20px rgba(212, 175, 55, 0.6);
+    }
+
+    .shop-now:active {
+      transform: scale(0.95);
+    }
+
+    .order-form {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .order-form input,
+    .order-form textarea {
+      padding: 10px;
+      border: 1px solid #d4af37;
+      border-radius: 8px;
+      background-color: black;
+      color: #d4af37;
+      width: 100%;
+    }
+
+    .order-form input::placeholder,
+    .order-form textarea::placeholder {
+      color: #d4af37;
+    }
+
+    .payment-options {
+      margin-top: 15px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .payment-options label {
+      font-size: 16px;
+      cursor: pointer;
+      color: #d4af37;
+    }
+
+    .payment-options input[type="radio"] {
+      margin-right: 8px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #000000;
+      color: #d4af37;
+      border-top: 1px solid #d4af37;
+    }
+
+    footer p {
+      font-size: 14px;
+      letter-spacing: 1px;
+    }
+
+    .whatsapp-link {
+      color: #25D366;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .whatsapp-link:hover {
+      text-decoration: underline;
+      color: #1ebe57;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">N Jewelry South Sudan</div>
+    <nav>
+      <ul>
+        <li><a href="#shop">Shop</a>
+          <ul class="dropdown">
+            <li><a href="#necklace">Necklaces</a></li>
+            <li><a href="#bracelet">Bracelets</a></li>
+            <li><a href="#ring">Rings</a></li>
+          </ul>
+        </li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#blogs">Blogs</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="shop" class="morph-section">
+      <h1>Shop Jewelry</h1>
+
+      <div id="necklace" class="category">
+        <h2>Necklaces</h2>
+        <img src="necklace-sample.jpg" alt="Necklace Sample">
+        <video controls width="300">
+          <source src="necklace-video.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <button class="shop-now" onclick="scrollToOrder()">Shop Now</button>
+      </div>
+
+      <div id="bracelet" class="category">
+        <h2>Bracelets</h2>
+        <img src="bracelet-sample.jpg" alt="Bracelet Sample">
+        <video controls width="300">
+          <source src="bracelet-video.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <button class="shop-now" onclick="scrollToOrder()">Shop Now</button>
+      </div>
+
+      <div id="ring" class="category">
+        <h2>Rings</h2>
+        <img src="ring-sample.jpg" alt="Ring Sample">
+        <video controls width="300">
+          <source src="ring-video.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <button class="shop-now" onclick="scrollToOrder()">Shop Now</button>
+      </div>
+
+    </section>
+
+    <section id="about" class="morph-section">
+      <h1>About N Jewelry</h1>
+      <p>Premium handcrafted jewelry in South Sudan. Shine with elegance!</p>
+    </section>
+
+    <section id="blogs" class="morph-section">
+      <h1>Our Blogs</h1>
+      <p>Coming Soon! Stay tuned for style guides, tips, and more.</p>
+    </section>
+
+    <section id="order" class="morph-section">
+      <h1>Place Your Order</h1>
+      <p>Fill in your details, and we'll get in touch with you!</p>
+      <p>Call/WhatsApp: 
+        <a href="https://wa.me/211928302477" target="_blank" class="whatsapp-link">
+          +211 92 830 2477
+        </a>
+      </p>
+      <form class="order-form">
+        <input type="text" placeholder="Full Name" required>
+        <input type="email" placeholder="Email Address" required>
+        <input type="text" placeholder="Product (e.g., Necklace, Bracelet, Ring)" required>
+        <textarea placeholder="Additional Details" rows="4"></textarea>
+
+        <h3>Select Payment Method:</h3>
+        <div class="payment-options">
+          <label><input type="radio" name="payment" value="PayPal" required> PayPal</label>
+          <label><input type="radio" name="payment" value="Mpesa"> Mpesa</label>
+          <label><input type="radio" name="payment" value="Mobile Money"> Mobile Money</label>
+          <label><input type="radio" name="payment" value="MoMo"> MoMo</label>
+        </div>
+
+        <button type="submit" class="shop-now">Submit Order</button>
+      </form>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Made by Luka Lual | &copy; 2025 N Jewelry South Sudan. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Smooth scroll to order
+    function scrollToOrder() {
+      document.getElementById('order').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // Morph transition on scroll
+    document.addEventListener('DOMContentLoaded', function() {
+      const sections = document.querySelectorAll('.morph-section');
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, {
+        threshold: 0.2
+      });
+      sections.forEach(section => {
+        observer.observe(section);
+      });
+    });
+  </script>
+
+</body>
+</html>
